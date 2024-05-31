@@ -2,11 +2,17 @@ import React from 'react';
 import useForm from '../hooks/useForm';
 import BackButton from './BackButton';
 import SubmitButton from './SubmitButton';
+import handleFormSubmit from '../utils/handleSubmit';
+
 
 function MarsAddressForm() {
-  const [ formValues, handleInputChange ] = useForm({address: ''});
+  const [ formValues, handleInputChange ] = useForm({
+    type: 'mars',
+    address: ''
+  });
+
   return (
-    <form>
+    <form onSubmit={(event) => handleFormSubmit(event, formValues)}>
       <div className="relative w-full min-w-[200px] h-10">
         <input
           name="address"
@@ -23,8 +29,8 @@ function MarsAddressForm() {
       </div>
       <div className="mt-10 w-full flex items-center justify-around">
           <SubmitButton />
-          <BackButton />         
-        </div>
+          <BackButton />
+      </div>
     </form>
   )
 }
