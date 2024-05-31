@@ -2,6 +2,7 @@ import React, { useState, useEffect, ChangeEvent } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { sendAlert } from '../utils/SendAlert';
 import Loading from './Loading';
+import MarsAddressForm from './MarsAddressForm';
 // import EarthAddressForm from './EarthAddressForm';
 
 function AddressForm() {
@@ -9,7 +10,7 @@ function AddressForm() {
   const { pathname } = useLocation();
   const [ location, setLocation ] = useState('');
   const [ isLoading, setIsLoading ] = useState<boolean>(false);
-  const [ addressType, setAddressType ] = useState('Terra');
+  const [ addressType, setAddressType ] = useState<string>('Terra');
   const [ addressData, setAddressData] = useState({
     id: '',
     address: '',
@@ -95,19 +96,7 @@ function AddressForm() {
       { addressType === 'Terra' ? (
         <p>Terra</p>
 
-      ) : (<p>Marte</p>)}
-      <div className="mt-10 w-full flex items-center justify-around">
-          <button
-            type="submit"
-            className="bg-transparent hover:bg-amber-500 text-amber-700 font-semibold hover:text-white py-2 px-12 border border-amber-500 hover:border-transparent rounded">
-              {location}
-          </button>
-          <button
-            className="bg-transparent hover:bg-amber-500 text-amber-700 font-semibold hover:text-white py-2 px-12 border border-amber-500 hover:border-transparent rounded"
-            onClick={() => history.push('/')}>
-              Voltar
-          </button>          
-        </div>  
+      ) : (<MarsAddressForm />)}      
     </div>
     }
       </>
