@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { sendAlert } from '../utils/SendAlert';
-import Button from '../components/Button';
-import { IMars, IEarth } from '../interfaces/address';
+import { IAddress } from '../interfaces/address';
+import { MarsAdressCard } from '../components/marsAddress/MarsAdressCard';
+import { EarthAdressCard } from '../components/earthAddress/EarthAddressCard';
 
 function Home() {
-  const [ addressList, setAddressList ] = useState<IMars[] | IEarth[]>([]);
+  const [ addressList, setAddressList ] = useState<IAddress[]>([]);
 
   useEffect(() => {
     const getAddressList = async () => {
@@ -30,9 +31,13 @@ function Home() {
         { addressList.length > 0 ? (
           addressList.map(addressEl => (
             <div className="md:gap-2 gap-40 mt-5 mb-5 border rounded flex md:justify-start lg:justify-between py-3 px-3" key={addressEl.address}>
-              <p>{addressEl.type}</p>
-              <p>Endereço: {addressEl.address}</p>
-              <Button text='Editar' route='/edit-user/:id' />
+              {
+                addressEl.type === 'earth' ? (
+                  <EarthAdressCard addressData = { addressEl } />                  
+                ) : (
+                  <MarsAdressCard addressData = { addressEl }/>
+                )
+              }
             </div>
           ))
         ) : (
