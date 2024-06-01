@@ -1,8 +1,8 @@
 import React from 'react';
 import useForm from '../hooks/useForm';
-import BackButton from './BackButton';
 import SubmitButton from './SubmitButton';
 import handleFormSubmit from '../utils/handleSubmit';
+import Button from './Button';
 
 
 function MarsAddressForm() {
@@ -29,7 +29,7 @@ function MarsAddressForm() {
       </div>
       <div className="mt-10 w-full flex items-center justify-around">
           <SubmitButton />
-          <BackButton />
+          <Button text= 'Voltar' route='/' />
       </div>
     </form>
   )
