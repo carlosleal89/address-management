@@ -10,10 +10,10 @@ export const MarsAdressCard: React.FC<addressProps> = ({ addressData }) => {
   return (
     <>
       <ImageEl img={marsImg} alt='Imagem de Marte' />
-      <Container classes='ml-3 w-48 mr-auto '>
+      <Container classes='ml-3 w-8 mr-auto sm:w-32 '>
         <BoldText label='Lote:' text={addressData.address} />        
       </Container>
-      <Container classes='ml-auto'>
+      <Container classes='ml-auto w-12'>
         <BoldText text='Marte' />
       </Container>
       <Button

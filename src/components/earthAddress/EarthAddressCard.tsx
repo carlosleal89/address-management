@@ -11,11 +11,11 @@ export const EarthAdressCard: React.FC<addressProps> = ({ addressData }) => {
   return (
     <>
       <ImageEl img={earthImg} alt='Imagem da Terra' />
-      <Container classes='ml-3 mr-auto w-80'>
+      <Container classes='ml-3 mr-auto w-44 sm:w-64'>
         <BoldText text={addressData.address} />
         <SmallText text={addressData.neighborhood} />
       </Container>
-      <Container classes='sm:mx-auto mr-auto'>
+      <Container classes='w-28 mx-auto mr-auto truncate'>
         <BoldText text={addressData.country} />
         <BoldText text={addressData.city} />
         <SmallText text={addressData.zipCode} />
