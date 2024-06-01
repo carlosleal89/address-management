@@ -4,11 +4,12 @@ import { addressProps } from '../../interfaces/addressProps';
 import earthImg from '../../images/earth.svg';
 import BoldText from '../textTags/BoldText';
 import SmallText from '../textTags/SmallText';
+import ImageEl from '../Image';
 
 export const EarthAdressCard: React.FC<addressProps> = ({ addressData }) => {  
   return (
     <>
-      <img src={earthImg} alt='imagem da terra' className='w-10' />
+      <ImageEl img={earthImg} alt='Imagem da Terra' />
       <div className='sm:ml-1'>
         <BoldText text={addressData.address} />
         <SmallText text={addressData.neighborhood} />

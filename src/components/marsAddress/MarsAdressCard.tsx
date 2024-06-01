@@ -3,11 +3,12 @@ import Button from '../Button';
 import { addressProps } from '../../interfaces/addressProps';
 import marsImg from '../../images/mars.png';
 import BoldText from '../textTags/BoldText';
+import ImageEl from '../Image';
 
 export const MarsAdressCard: React.FC<addressProps> = ({ addressData }) => {
   return (
     <>
-      <img src={marsImg} alt='imagem de marte' className='w-10 mt-1 mb-auto' />
+      <ImageEl img={marsImg} alt='Imagem de Marte' />
       <BoldText label='Lote:' text={addressData.address} />
       <Button
         text='Editar'
