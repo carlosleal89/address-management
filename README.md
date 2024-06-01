@@ -5,7 +5,7 @@ Este aplicativo foi desenvolvido para permitir aos usuários visualizar uma list
 Tecnologias Utilizadas:
 - Typescript;
 - React com create-react-app;
-- Tailwind;
+- Tailwind com responsividade para telas a partir de 480;
 - Joi para validação dos inputs;
 - SweetAlert para alertas;
 - UuidV4 para geração de ids;
