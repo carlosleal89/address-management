@@ -1,7 +1,6 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { sendAlert } from '../utils/SendAlert';
-import Loading from './Loading';
 import MarsAddressForm from './MarsAddressForm';
 // import EarthAddressForm from './EarthAddressForm';
 
@@ -9,16 +8,7 @@ function AddressForm() {
   const history = useHistory();
   const { pathname } = useLocation();
   const [ location, setLocation ] = useState('');
-  const [ isLoading, setIsLoading ] = useState<boolean>(false);
   const [ addressType, setAddressType ] = useState<string>('Terra');
-  const [ addressData, setAddressData] = useState({
-    id: '',
-    address: '',
-    neighborhood: '',
-    city: '',
-    zipCode: '',
-    country: '',
-  });
 
   useEffect(() => {
     if (pathname === '/new-address') {
@@ -28,55 +18,9 @@ function AddressForm() {
       // setAddressData({...customerById})
       // usar dados do localstorage      
     }
-  }, [])
-
-  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = event.target;
-    setAddressData((prevValues: any) => ({
-      ...prevValues,
-      [name]: value,
-    }));
-  };
-
-  // const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
-  //   event.preventDefault();
-  //   const reqBody = {
-  //     name: addressData.name,
-  //     email: addressData.email,
-  //     cpf: addressData.cpf,
-  //     phone: addressData.phone,
-  //     status: addressData.status
-  //   }
-  //     try {
-  //       setIsLoading(true);
-  //       if (location === 'Salvar') {
-  //         console.log();
-          
-  //       } else {        
-  //         console.log();                  
-  //       }
-  //       sendAlert('Sucesso!',
-  //         location === 'Salvar' ? 'Endereço criado!' : 'Dados atualizados!', 'success')
-  //       .then(() => {
-  //         history.push('/');
-  //       });
-  //       setIsLoading(false);
-  //     } catch (error: any) {
-  //       console.error(error.message);
-  //         sendAlert('Erro!',
-  //           'Ocorreu um erro interno no servidor. Por favor, tente novamente.', 'error')
-  //         .then(() => {
-  //           setIsLoading(false);
-  //         });
-  //     }
-  // }
+  }, []);
 
   return (
-    <>
-    {isLoading && <Loading />}
-    {
-      !isLoading
-        &&
     <div>
       <div className="relative h-10 w-full min-w-[200px]">
         <select
@@ -97,9 +41,7 @@ function AddressForm() {
         <p>Terra</p>
 
       ) : (<MarsAddressForm />)}      
-    </div>
-    }
-      </>
+    </div>    
   )
 }
 
