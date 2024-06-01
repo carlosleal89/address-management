@@ -1,8 +1,8 @@
 import React from 'react';
-import useForm from '../hooks/useForm';
-import SubmitButton from './SubmitButton';
-import handleFormSubmit from '../utils/handleSubmit';
-import Button from './Button';
+import useForm from '../../hooks/useForm';
+import SubmitButton from '../SubmitButton';
+import handleFormSubmit from '../../utils/handleSubmit';
+import Button from '../Button';
 
 
 function MarsAddressForm() {

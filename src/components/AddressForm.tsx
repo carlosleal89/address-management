@@ -1,8 +1,8 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { sendAlert } from '../utils/SendAlert';
-import MarsAddressForm from './MarsAddressForm';
-import EarthAddressForm from './EarthAddressForm';
+import MarsAddressForm from './marsAddress/MarsAddressForm';
+import EarthAddressForm from './earthAddress/EarthAddressForm';
 // import EarthAddressForm from './EarthAddressForm';
 
 function AddressForm() {
