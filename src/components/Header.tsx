@@ -1,11 +1,11 @@
 import React from 'react'
 import Button from './Button';
+import logo from '../images/beyond_the_bytes.jpg';
 
 function Header() {
   return (
     <div className="flex bg-slate-800">
-      <h1>Header</h1>
-      <img src={ '' } alt="company logo" id="header-logo" />
+      <img src={ logo } alt="company logo" id="header-logo" className='w-12' />
       <Button text= 'Novo Endereço' route='/new-address' /> 
     </div>
   )
