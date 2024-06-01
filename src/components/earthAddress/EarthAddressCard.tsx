@@ -11,7 +11,7 @@ export const EarthAdressCard: React.FC<addressProps> = ({ addressData }) => {
   return (
     <>
       <ImageEl img={earthImg} alt='Imagem da Terra' />
-      <Container classes='sm:ml-3 mr-auto w-80'>
+      <Container classes='ml-3 mr-auto w-80'>
         <BoldText text={addressData.address} />
         <SmallText text={addressData.neighborhood} />
       </Container>
@@ -23,7 +23,7 @@ export const EarthAdressCard: React.FC<addressProps> = ({ addressData }) => {
       <Button
         text='Editar'
         route={`/edit-address/${addressData.id}`}
-        classes='sm:px-4 py-1 my-auto ml-1 mr-1 justify-center'
+        classes='px-4 py-1 my-auto ml-1 mr-1 justify-center'
       />
     </>
   )

@@ -14,7 +14,7 @@ const EditAddress = () => {
   return (
     <Container classes='m-8'>
       <Container classes='text-xl'>
-        <BoldText text='Novo Endereço' />
+        <BoldText text='Editar Endereço' />
       </Container>
       {
         addressEl && addressEl.type === 'earth' ? (

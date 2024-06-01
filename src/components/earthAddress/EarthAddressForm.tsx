@@ -22,7 +22,7 @@ const EarthAddressForm: React.FC<editAddressProps> = ({ addressData }) => {
 
   return (
     <form
-      className="sm:mt-10 mb-5 flex flex-col items-start gap-5 w-80"
+      className="mt-10 mb-5 flex flex-col items-start gap-5 w-80"
       onSubmit={(event) => handleFormSubmit(event, formValues, pathname)}
     >         
       <div className="relative w-full min-w-[200px] h-10">
@@ -100,7 +100,7 @@ const EarthAddressForm: React.FC<editAddressProps> = ({ addressData }) => {
         <Button
           text= 'Voltar'
           route='/'
-          classes='sm:px-12 py-2 my-auto ml-1 mr-1 justify-center'
+          classes='px-12 py-2 my-auto ml-1 mr-1 justify-center'
         />
       </div>
     </form>

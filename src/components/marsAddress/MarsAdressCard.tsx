@@ -10,16 +10,16 @@ export const MarsAdressCard: React.FC<addressProps> = ({ addressData }) => {
   return (
     <>
       <ImageEl img={marsImg} alt='Imagem de Marte' />
-      <Container classes='sm:ml-3 w-48 mr-auto '>
+      <Container classes='ml-3 w-48 mr-auto '>
         <BoldText label='Lote:' text={addressData.address} />        
       </Container>
-      <Container classes='sm:ml-auto'>
+      <Container classes='ml-auto'>
         <BoldText text='Marte' />
       </Container>
       <Button
         text='Editar'
         route={`/edit-address/${addressData.id}`}
-        classes='sm:px-4 py-1 my-auto ml-auto mr-1 justify-center'
+        classes='px-4 py-1 my-auto ml-auto mr-1 justify-center'
       />
     </>
   )
