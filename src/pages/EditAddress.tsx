@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import checkId from '../utils/checkId';
 import EarthAddressForm from '../components/earthAddress/EarthAddressForm';
 import MarsAddressForm from '../components/marsAddress/MarsAddressForm';
+import Container from '../components/Container';
 
 const EditAddress = () => {
 
@@ -10,7 +11,7 @@ const EditAddress = () => {
   const addressEl = checkId(id);
   
   return (
-    <div>
+    <Container classes='m-8'>
       <h1>Editar endereço</h1>
       {
         addressEl && addressEl.type === 'earth' ? (
@@ -19,7 +20,7 @@ const EditAddress = () => {
           <MarsAddressForm addressData={ addressEl } />
         )
       }
-    </div>
+    </Container>    
   )
 }
 
