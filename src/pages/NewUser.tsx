@@ -1,11 +1,11 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { sendAlert } from '../utils/SendAlert';
-import MarsAddressForm from './marsAddress/MarsAddressForm';
-import EarthAddressForm from './earthAddress/EarthAddressForm';
+import MarsAddressForm from '../components/marsAddress/MarsAddressForm';
+import EarthAddressForm from '../components/earthAddress/EarthAddressForm';
 // import EarthAddressForm from './EarthAddressForm';
 
-function AddressForm() {
+function NewUser() {
   const history = useHistory();
   const { pathname } = useLocation();
   const [ location, setLocation ] = useState('');
@@ -43,4 +43,4 @@ function AddressForm() {
   )
 }
 
-export default AddressForm;
+export default NewUser;

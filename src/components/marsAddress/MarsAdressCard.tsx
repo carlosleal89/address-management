@@ -7,7 +7,7 @@ export const MarsAdressCard: React.FC<addressProps> = ({ addressData }) => {
     <>
       <p>{addressData.type}</p>
       <p>Endereço: {addressData.address}</p>
-      <Button text='Editar' route='/edit-user/:id' />
+      <Button text='Editar' route={`/edit-user/:${addressData.id}`} />
     </>
   )
 }
