@@ -6,7 +6,7 @@ const  Button: React.FC<buttonProps> = ({ text, route, classes }) => {
   const history = useHistory();
   return (
     <button
-      className={`${classes} bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-12 border border-blue-500 hover:border-transparent rounded`}
+      className={`${classes} hover:bg-blue-500 text-blue-500 font-semibold hover:text-white border border-blue-500 hover:border-transparent rounded`}
       onClick={() => history.push(route)}>
         {text}
     </button>

@@ -22,7 +22,7 @@ export const EarthAdressCard: React.FC<addressProps> = ({ addressData }) => {
       <Button
         text='Editar'
         route={`/edit-address/${addressData.id}`}
-        classes='sm:w-10 h-10 my-auto ml-auto mr-1 justify-center'
+        classes='sm:px-4 py-1 my-auto ml-auto mr-1 justify-center'
       />
     </>
   )

@@ -25,12 +25,11 @@ function Home() {
 
   return (
     <div>
-      <h1 className="text-xl font-semibold">Listagem de endereços</h1>
-      
+      <h1 className="text-xl font-semibold">Listagem de endereços</h1>      
       <div>
         { addressList.length > 0 ? (
           addressList.map(addressEl => (
-            <div className="sm:gap-1 sm:h-20 md:gap-2 gap-40 mt-5 mb-5 border rounded flex" key={addressEl.id}>
+            <div className="sm:gap-1 h-20 mx-2 px-2 md:gap-2 gap-40 mt-5 mb-5 border rounded flex" key={addressEl.id}>
               {
                 addressEl.type === 'earth' ? (
                   <EarthAdressCard addressData = { addressEl } />                  
