@@ -4,12 +4,18 @@ import { addressProps } from '../../interfaces/addressProps';
 import marsImg from '../../images/mars.png';
 import BoldText from '../textTags/BoldText';
 import ImageEl from '../Image';
+import Container from '../Container';
 
 export const MarsAdressCard: React.FC<addressProps> = ({ addressData }) => {
   return (
     <>
       <ImageEl img={marsImg} alt='Imagem de Marte' />
-      <BoldText label='Lote:' text={addressData.address} />
+      <Container classes='sm:ml-3 w-48 mr-auto '>
+        <BoldText label='Lote:' text={addressData.address} />        
+      </Container>
+      <Container classes='sm:ml-auto'>
+        <BoldText text='Marte' />
+      </Container>
       <Button
         text='Editar'
         route={`/edit-address/${addressData.id}`}
