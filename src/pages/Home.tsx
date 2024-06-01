@@ -30,7 +30,7 @@ function Home() {
       <div>
         { addressList.length > 0 ? (
           addressList.map(addressEl => (
-            <div className="md:gap-2 gap-40 mt-5 mb-5 border rounded flex md:justify-start lg:justify-between py-3 px-3" key={addressEl.address}>
+            <div className="md:gap-2 gap-40 mt-5 mb-5 border rounded flex md:justify-start lg:justify-between py-3 px-3" key={addressEl.id}>
               {
                 addressEl.type === 'earth' ? (
                   <EarthAdressCard addressData = { addressEl } />                  

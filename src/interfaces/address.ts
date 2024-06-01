@@ -1,8 +1,8 @@
-export interface IMars {
-  id?: string;
-  type: string;
-  address: string;
-}
+// export interface IMars {
+//   id?: string;
+//   type: string;
+//   address: string;
+// }
 
 export interface IAddress {
   id?: string;

@@ -1,6 +1,7 @@
+import { IAddress } from "../interfaces/address";
 import generatedId from "./generateId";
 
-const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>, formValues: any) => {
+const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>, formValues: IAddress) => {
   event.preventDefault();
 
   const newId = generatedId();

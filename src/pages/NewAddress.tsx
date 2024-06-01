@@ -1,25 +1,10 @@
-import React, { useState, useEffect, ChangeEvent } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
 import { sendAlert } from '../utils/SendAlert';
 import MarsAddressForm from '../components/marsAddress/MarsAddressForm';
 import EarthAddressForm from '../components/earthAddress/EarthAddressForm';
-// import EarthAddressForm from './EarthAddressForm';
 
-function NewUser() {
-  const history = useHistory();
-  const { pathname } = useLocation();
-  const [ location, setLocation ] = useState('');
+function NewAddress() {
   const [ addressType, setAddressType ] = useState<string>('Terra');
-
-  useEffect(() => {
-    if (pathname === '/new-address') {
-      setLocation('Salvar');
-    } else {
-      setLocation('Editar');      
-      // setAddressData({...customerById})
-      // usar dados do localstorage      
-    }
-  }, []);
 
   return (
     <div>
@@ -43,4 +28,4 @@ function NewUser() {
   )
 }
 
-export default NewUser;
+export default NewAddress;

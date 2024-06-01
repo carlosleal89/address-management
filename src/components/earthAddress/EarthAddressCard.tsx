@@ -2,9 +2,7 @@ import React from 'react';
 import Button from '../Button';
 import { addressProps } from '../../interfaces/addressProps';
 
-export const EarthAdressCard: React.FC<addressProps> = ({ addressData }) => {
-  console.log(addressData);
-  
+export const EarthAdressCard: React.FC<addressProps> = ({ addressData }) => {  
   return (
     <>
       <p>{addressData.type}</p>
@@ -13,7 +11,7 @@ export const EarthAdressCard: React.FC<addressProps> = ({ addressData }) => {
       <p>Cidade: {addressData.city}</p>
       <p>País: {addressData.country}</p>
       <p>CEP: {addressData.zipCode}</p>
-      <Button text='Editar' route='/edit-user/:id' />
+      <Button text='Editar' route={`/edit-address/${addressData.id}`} />
     </>
   )
 }

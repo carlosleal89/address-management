@@ -3,16 +3,20 @@ import useForm from '../../hooks/useForm';
 import SubmitButton from '../SubmitButton';
 import handleFormSubmit from '../../utils/handleSubmit';
 import Button from '../Button';
+import { editAddressProps } from '../../interfaces/editAddressProps';
 
-function EarthAddressForm() {
-  const [ formValues, handleInputChange ] = useForm({
+const EarthAddressForm: React.FC<editAddressProps> = ({ addressData }) => {
+
+  const initialValues = {
     type: 'earth',
     address: '',
     neighborhood: '',
     city: '',
     zipCode: '',
     country: '',
-  });
+  };
+
+  const [ formValues, handleInputChange ] = useForm(addressData ? addressData : initialValues);
 
   return (
     <form
@@ -49,7 +53,7 @@ function EarthAddressForm() {
       </div>
       <div className="relative w-full min-w-[200px] h-10">
         <input
-          name="cpf"
+          name="city"
           value={formValues.city}
           onChange={handleInputChange}
           id="city"

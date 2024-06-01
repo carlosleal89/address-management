@@ -1,15 +1,24 @@
 import React from 'react';
 import useForm from '../../hooks/useForm';
 import SubmitButton from '../SubmitButton';
+import { useLocation } from 'react-router-dom';
 import handleFormSubmit from '../../utils/handleSubmit';
 import Button from '../Button';
+import { editAddressProps } from '../../interfaces/editAddressProps';
 
 
-function MarsAddressForm() {
-  const [ formValues, handleInputChange ] = useForm({
-    type: 'mars',
+const MarsAddressForm: React.FC<editAddressProps> = ({ addressData }) => {
+  const { pathname } = useLocation();
+  console.log('LOCATION', pathname.includes('edit'));
+  
+  
+
+  const initialValues = {
+    type: 'earth',
     address: ''
-  });
+  };
+
+  const [ formValues, handleInputChange ] = useForm(addressData ? addressData : initialValues);
 
   return (
     <form onSubmit={(event) => handleFormSubmit(event, formValues)}>
