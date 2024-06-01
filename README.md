@@ -19,19 +19,21 @@ https://address-management3.vercel.app/
 
 - Visualizar a lista de endereços cadastrados:
 
-<img src="./frontend/src/images/home-page.png" alt="Tela principal da aplicação">
+<img src="./src/images/readme/main.png" alt="Tela principal da aplicação">
 
 - Cadastrar um novo endereço:
 
-<img src="./frontend/src/images/create-user.png" alt="Tela para criar um novo cliente">
+<img src="./src/images/readme/newAddress.png" alt="Tela para criar um novo endereço na Terra">
+<img src="./src/images/readme/newAddressMars.png" alt="Tela para criar um novo endereço em Marte">
 
 - Editar um endereço já existente:
 
-<img src="./frontend/src/images/edit-user.png" alt="Tela editar um cliente já existente">
+<img src="./src/images/readme/editAddress.png" alt="Tela editar um endereço já existente">
 
 - Exemplos dos alertas:
 
-<img src="./frontend/src/images/edit-user.png" alt="Tela editar um cliente já existente">
+<img src="./src/images/readme/alertExample.png" alt="Exemplo de um alerta">
+<img src="./src/images/readme/validationError.png" alt="Exemplo de um alerta para erro de validação">
 
 
 ## Como Executar o Projeto:
