@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { sendAlert } from '../utils/SendAlert';
+import { sendAlert } from '../utils/sendAlert';
 import { IAddress } from '../interfaces/address';
 import { MarsAdressCard } from '../components/marsAddress/MarsAdressCard';
 import { EarthAdressCard } from '../components/earthAddress/EarthAddressCard';

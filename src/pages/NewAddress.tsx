@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { sendAlert } from '../utils/SendAlert';
+import { sendAlert } from '../utils/sendAlert';
 import MarsAddressForm from '../components/marsAddress/MarsAddressForm';
 import EarthAddressForm from '../components/earthAddress/EarthAddressForm';
 

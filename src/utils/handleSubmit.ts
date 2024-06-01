@@ -1,9 +1,10 @@
 import { IAddress } from "../interfaces/address";
 import extractIdFromUrl from "./extractId";
 import generatedId from "./generateId";
+import { confirmationAlert } from "./sendAlert";
 import updateAddress from "./updateAddress";
 
-const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>, formValues: IAddress, url: string) => {
+const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>, formValues: IAddress, url: string) => {
   event.preventDefault();
 
   const localStorageData = localStorage.getItem('beyondAddresses');
@@ -21,6 +22,11 @@ const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>, formValues: I
     localStorage.setItem('beyondAddresses', JSON.stringify(beyondAddresses));
   }
 
+  const isConfirmed = await confirmationAlert();
+  
+  if (isConfirmed) {
+    window.location.href = '/';
+  }
 };
 
 export default handleFormSubmit;
