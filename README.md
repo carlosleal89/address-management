@@ -1,47 +1,49 @@
-# Getting Started with Create React App
+## Descrição:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este aplicativo foi desenvolvido para permitir aos usuários visualizar uma lista de endereços, assim como criar um novo registro de endereço e editar um registro existente.
 
-## Available Scripts
+Tecnologias Utilizadas:
+- Typescript;
+- React com create-react-app;
+- Tailwind;
+- Joi para validação dos inputs;
+- SweetAlert para alertas;
+- UuidV4 para geração de ids;
 
-In the project directory, you can run:
+Visite o site no link abaixo:
 
-### `npm start`
+https://address-management3.vercel.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Funcionalidades principais:
 
-### `npm test`
+- Visualizar a lista de endereços cadastrados:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="./frontend/src/images/home-page.png" alt="Tela principal da aplicação">
 
-### `npm run build`
+- Cadastrar um novo endereço:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="./frontend/src/images/create-user.png" alt="Tela para criar um novo cliente">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Editar um endereço já existente:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src="./frontend/src/images/edit-user.png" alt="Tela editar um cliente já existente">
 
-### `npm run eject`
+- Exemplos dos alertas:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<img src="./frontend/src/images/edit-user.png" alt="Tela editar um cliente já existente">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Como Executar o Projeto:
+  
+  1. Execute o comando a seguir no diretório raiz:
+       
+         npm install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  2. Execute o comando:
 
-## Learn More
+         npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  3. Acesse o aplicativo:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-# address-management
+         http://localhost:3000/
