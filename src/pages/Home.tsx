@@ -30,12 +30,12 @@ function Home() {
       <div>
         { addressList.length > 0 ? (
           addressList.map(addressEl => (
-            <div className="sm:gap-1 md:gap-2 gap-40 mt-5 mb-5 border rounded flex" key={addressEl.id}>
+            <div className="sm:gap-1 sm:h-20 md:gap-2 gap-40 mt-5 mb-5 border rounded flex" key={addressEl.id}>
               {
                 addressEl.type === 'earth' ? (
                   <EarthAdressCard addressData = { addressEl } />                  
                 ) : (
-                  <MarsAdressCard addressData = { addressEl }/>
+                  <MarsAdressCard addressData = { addressEl } />
                 )
               }
             </div>
