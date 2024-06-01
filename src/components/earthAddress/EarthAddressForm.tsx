@@ -2,10 +2,12 @@ import React from 'react';
 import useForm from '../../hooks/useForm';
 import SubmitButton from '../SubmitButton';
 import handleFormSubmit from '../../utils/handleSubmit';
+import { useLocation } from 'react-router-dom';
 import Button from '../Button';
 import { editAddressProps } from '../../interfaces/editAddressProps';
 
 const EarthAddressForm: React.FC<editAddressProps> = ({ addressData }) => {
+  const { pathname } = useLocation(); 
 
   const initialValues = {
     type: 'earth',
@@ -21,7 +23,7 @@ const EarthAddressForm: React.FC<editAddressProps> = ({ addressData }) => {
   return (
     <form
       className="mt-10 mb-5 flex flex-col items-start gap-5 w-80"
-      onSubmit={(event) => handleFormSubmit(event, formValues)}
+      onSubmit={(event) => handleFormSubmit(event, formValues, pathname)}
     >         
       <div className="relative w-full min-w-[200px] h-10">
         <input

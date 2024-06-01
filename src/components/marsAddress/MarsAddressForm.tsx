@@ -8,20 +8,17 @@ import { editAddressProps } from '../../interfaces/editAddressProps';
 
 
 const MarsAddressForm: React.FC<editAddressProps> = ({ addressData }) => {
-  const { pathname } = useLocation();
-  console.log('LOCATION', pathname.includes('edit'));
-  
-  
+  const { pathname } = useLocation(); 
 
   const initialValues = {
-    type: 'earth',
+    type: 'mars',
     address: ''
   };
 
   const [ formValues, handleInputChange ] = useForm(addressData ? addressData : initialValues);
 
   return (
-    <form onSubmit={(event) => handleFormSubmit(event, formValues)}>
+    <form onSubmit={(event) => handleFormSubmit(event, formValues, pathname)}>
       <div className="relative w-full min-w-[200px] h-10">
         <input
           name="address"
