@@ -25,7 +25,7 @@ function Home() {
 
   return (
     <div>
-      <h1 className="text-xl font-semibold">Home</h1>
+      <h1 className="text-xl font-semibold">Listagem de endereços</h1>
       
       <div>
         { addressList.length > 0 ? (

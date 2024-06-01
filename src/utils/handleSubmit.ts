@@ -1,7 +1,8 @@
 import { IAddress } from "../interfaces/address";
+import { validateAddress } from "../validations/inputValidator";
 import extractIdFromUrl from "./extractId";
 import generatedId from "./generateId";
-import { confirmationAlert } from "./sendAlert";
+import { confirmationAlert, sendAlert } from "./sendAlert";
 import updateAddress from "./updateAddress";
 
 const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>, formValues: IAddress, url: string) => {
@@ -11,7 +12,13 @@ const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>, formVal
 
   const beyondAddresses = localStorageData ? JSON.parse(localStorageData) : [];
 
+  const validationError = validateAddress(formValues);
+  if (validationError.error) {
+    const { error } = validationError;      
+    return sendAlert('Dados inválidos', error.message, 'error')
+  }
   if (url.includes('edit')) {
+    
     const id = extractIdFromUrl(url);
     updateAddress(beyondAddresses, id, formValues);
   } else {
