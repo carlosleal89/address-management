@@ -4,6 +4,7 @@ import checkId from '../utils/checkId';
 import EarthAddressForm from '../components/earthAddress/EarthAddressForm';
 import MarsAddressForm from '../components/marsAddress/MarsAddressForm';
 import Container from '../components/Container';
+import BoldText from '../components/textTags/BoldText';
 
 const EditAddress = () => {
 
@@ -12,7 +13,9 @@ const EditAddress = () => {
   
   return (
     <Container classes='m-8'>
-      <h1>Editar endereço</h1>
+      <Container classes='text-xl'>
+        <BoldText text='Novo Endereço' />
+      </Container>
       {
         addressEl && addressEl.type === 'earth' ? (
           <EarthAddressForm addressData={ addressEl } />

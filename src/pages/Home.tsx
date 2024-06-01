@@ -26,9 +26,11 @@ function Home() {
   }, [])
 
   return (
-    <div>
-      <h1 className="text-xl font-semibold">Listagem de endereços</h1>      
-      <div>
+    <Container classes=''>
+      <Container classes='text-xl ml-2 mb-5'>
+        <BoldText text='Listagem de endereços' />
+      </Container> 
+      <Container classes=''>
         { addressList.length > 0 ? (
           addressList.map(addressEl => (
             <div className="min-h-24 gap-1 mx-2 px-2 my-5 py-2 border border-blue-500 rounded flex" key={addressEl.id}>
@@ -46,9 +48,9 @@ function Home() {
             <BoldText text='Nenhum endereço cadastrado!' />
           </Container>
         )
-        }
-      </div>
-    </div>
+        }        
+      </Container>    
+    </Container>
   )
 }
 

@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 import MarsAddressForm from '../components/marsAddress/MarsAddressForm';
 import EarthAddressForm from '../components/earthAddress/EarthAddressForm';
 import Container from '../components/Container';
+import BoldText from '../components/textTags/BoldText';
 
 function NewAddress() {
   const [ addressType, setAddressType ] = useState<string>('Terra');
 
   return (
     <Container classes='m-8'>
+      <Container classes='text-xl mb-5'>
+        <BoldText text='Novo Endereço' />
+      </Container>
       <div className="relative h-10 w-full min-w-[200px]">
         <select
           id="addressType" name="addressType" value={addressType}
@@ -23,7 +27,11 @@ function NewAddress() {
         </label>
       </div>
 
-      { addressType === 'Terra' ? (<EarthAddressForm />) : (<MarsAddressForm />)}
+      { addressType === 'Terra' ? (
+        <EarthAddressForm />
+          ) : (
+        <MarsAddressForm />
+        )}
 
     </Container>   
   )
